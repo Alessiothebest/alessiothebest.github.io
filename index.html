@@ -1,0 +1,54 @@
+<style>
+body {
+	text-align: center;
+}
+img {
+	width: 700px;
+	height: auto;
+	margin-top: 2rem;
+}
+div {
+	width: 100%;
+	padding: 2rem 0;
+	text-align: center;
+	box-sizing: border-box;
+}
+button, input {
+	font-size: 1.5rem;
+	line-height: 1.5;
+	height: 3rem;
+	padding: 0 1rem;
+	border: 1px solid #ccc;
+	background-color: transparent;
+	outline: none;
+}
+button {
+	cursor: pointer;
+	margin-left: 0.5rem;
+}
+button:hover{
+	border-color: #000;
+	background-color: #000;
+	color: #fff;
+}
+input:focus {
+	border-color: #000;
+}
+</style>
+<div id="inputs">
+	<input type="number" placeholder="G:" id="g">
+	<button onclick="check()">Check Your Answers</button>
+</div>
+<img src="https://image.freepik.com/vector-gratis/trophie_53876-25485.jpg" style="display:none;">
+<script>
+function check(){
+	g = document.getElementById("g").value;
+	answer = 1173.5;
+	if(Math.floor(g * 10) / 10 == answer){
+		document.getElementById("inputs").setAttribute("style", "display:none;");
+		document.querySelector("img").removeAttribute("style");
+	}else{
+		alert("Wrong! Sorry :(");
+	}
+}
+</script>
