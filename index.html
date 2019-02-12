@@ -36,13 +36,13 @@ input:focus {
 }
 </style>
 <div id="inputs">
-	<input type="number" placeholder="G:" id="g">
+	<input type="number" placeholder="F:" id="f">
 	<button onclick="check()">Check Your Answers</button>
 </div>
 <img src="https://image.freepik.com/vector-gratis/trophie_53876-25485.jpg" style="display:none;">
 <script>
 function check(){
-	g = document.getElementById("g").value;
+	g = document.getElementById("f").value;
 	answer = 1173.5;
 	if(Math.floor(g * 10) / 10 == answer){
 		document.getElementById("inputs").setAttribute("style", "display:none;");
